@@ -39,7 +39,7 @@
 			$(".sliderWrap").bxSlider({
 			});
 
-			$(".chara").mouseover(function() {
+			$(".chara").mouseover(function(){
 			     $(this).attr("src", $(this).attr("src").replace("Before","After"));
 			});
 			$(".chara").mouseout(function() {
@@ -63,13 +63,15 @@
 	</nav>
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
-			<img src="img/full_bg2.svg" alt="" class="bg2">
+			<!-- <img src="img/full_bg2.svg" alt="" class="bg2"> -->
 			<img src="img/chara_01_Before.png" alt="" class="chara">
 			<img src="img/chara_02_Before.png" alt="" class="chara">
 			<img src="img/chara_03.png" alt="" class="chara01">
 			<img src="img/chara_04_Before.png" alt="" class="chara">
 			<div class="scroll">
-				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
+				<a href="#2st">
+					<img src="images/btn_scroll.png" alt="">
+				</a>
 			</div>			
 		</div>
 		<div class="section page" id="page2" data-anchor="2st">
