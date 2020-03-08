@@ -8,9 +8,15 @@
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+ 
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
-	<script src="js/jquery.bxslider.js"></script>
+<!-- 	<script src="js/jquery.bxslider.js"></script> -->
+	<script type="text/javascript" src="js/slick.min.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			$("#fullpage").fullpage({
@@ -36,7 +42,7 @@
 				$(".slide1").height(wh);
 			}
 			whh();
-			$(".sliderWrap").bxSlider({
+			$(".sliderWrap").slick({
 			});
 
 			$(".chara").mouseover(function(){
@@ -46,7 +52,45 @@
 			     $(this).attr("src", $(this).attr("src").replace("After", "Before"));
 			});
 
+			$('.responsive').slick({
+			  dots: true,
+			  infinite: false,
+			  speed: 300,
+			  slidesToShow: 4,
+			  slidesToScroll: 4,
+			  responsive: [
+			    {
+			      breakpoint: 1024,
+			      settings: {
+			        slidesToShow: 3,
+			        slidesToScroll: 3,
+			        infinite: true,
+			        dots: true
+			      }
+			    },
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 2
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    }
+			    // You can unslick at a given breakpoint now by adding:
+			    // settings: "unslick"
+			    // instead of a settings object
+			  ]
+			});
+
 		});
+
+
 	</script>
 </head>
 <body>
@@ -63,11 +107,16 @@
 	</nav>
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
-			<!-- <img src="img/full_bg2.svg" alt="" class="bg2"> -->
-			<img src="img/chara_01_Before.png" alt="" class="chara">
-			<img src="img/chara_02_Before.png" alt="" class="chara">
-			<img src="img/chara_03.png" alt="" class="chara01">
-			<img src="img/chara_04_Before.png" alt="" class="chara">
+			<div class="chara_img">
+				<!-- <img src="img/full_bg2.svg" alt="" class="bg2"> -->
+				<img src="img/chara_01_Before.png" alt="" class="chara">
+				<img src="img/chara_02_Before.png" alt="" class="chara">
+				<img src="img/chara_03_Before.png" alt="" class="chara">
+				<img src="img/chara_04_Before.png" alt="" class="chara">
+			</div>
+			<div class="logo_img">
+				<img src="img/logo_main.png" alt="">
+			</div>
 			<div class="scroll">
 				<a href="#2st">
 					<img src="images/btn_scroll.png" alt="">
@@ -75,43 +124,57 @@
 			</div>			
 		</div>
 		<div class="section page" id="page2" data-anchor="2st">
-			<div class="main" id="onView">
-				<h3>Lorem ipsum.</h3>
-				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
-				<!-- <video id="myVideo" autoplay muted data-autoplay>
-				<source src="../images/video.mp4">
-			</video> -->
+			<div class="page_title">
+				<h2>작품소개</h2>
+			</div>
+			<div class="page2_img01">
+				<img src="img/contant02_chara01.png" alt="엉덩이탐정">
+			</div>
+			<div class="main m2" id="onView">
+				<div class="page2_txt">
+					<h3>엉덩이탐정</h3>
+					<h4> おしりたんてい</h4>
+					<span>tv만화 | 코믹액션 | 전체관람가<br>일본 NHK-E 테레 2018.05.03. ~ 2019.03.30. | 11분 * 26화 | (금) 오후 05:30</span>
+					<p>엉덩이 탐정과 엉덩이 멋쟁이 부모와 자식 태그로 유적의 수수께끼에 도전하는 모험 활극! 엉덩이 형사 부친 인 댄디에서 의뢰를 받아 무당 벌레 유적을 오자. 유적에 숨겨진 보물이 비가 팔지 않고 무력한 텐텐 마을을 푸는 열쇠가된다고한다. 댄디는 텐텐 마을의 어린이 · 팡땅 함께 한발 앞서 유적으로 향하는하지만 보물을 빼앗 으려하는 이상한 둘로에 표적이되고 만다. 또한 답변 U에서도 예고 장이 도착 ... 엉덩이 형사 댄디의 뒤를 쫓으면서, 유적 야기 할 수많은 수수께끼를 해명!</p>
+					<a href="#">작품상세보기</a>
+				</div>
+				<div class="video">
+					<video id="myVideo" autoplay muted data-autoplay>
+						<source src="img/video.mp4">
+					</video>
+				</div>
+			</div>
+			<div class="page2_img02">
+				<img src="img/contant02_chara02.png" alt="">
 			</div>
 			<div class="scroll">
 				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 		<div class="section page" id="page3" data-anchor="3st">
-			<div class="main" id="onView1">
-				<h3>Lorem ipsum.</h3>
-				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
+			<div class="page_title">
+				<h2>캐릭터소개</h2>
 			</div>
+			<!-- div.slide*4>.sView$>lorem30 -->
+			<div class="responsive">
+				<ul class="clearfix">
+					<li><img src="img/page03_01.jpg" alt=""></li>
+					<li><img src="img/page03_02.jpg" alt=""></li>
+					<li><img src="img/page03_03.jpg" alt=""></li>
+					<li><img src="img/page03_04.jpg" alt=""></li>
+					<li><img src="img/page03_05.jpg" alt=""></li>
+					<li><img src="img/page03_06.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
 			<div class="scroll">
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 		<div class="section page" id="page4" data-anchor="4st">
-			<style>
-				.slide{position: relative;}
-				.slide .sView1,
-				.slide .sView2,
-				.slide .sView3,
-				.slide .sView4{position: absolute;width: 500px;height: 500px;background-color: skyblue;left:50%;right:50%;transform:translate(-50%,-50%);}
-			</style>
-			<!-- div.slide*4>.sView$>lorem30 -->
-			<div class="sliderWrap">
-				<div class="slide1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, omnis illo, iure asperiores libero cum officia molestias totam aliquid ullam quae, temporibus quis dolor, magni dolore vel quam sequi hic.</div>
-				<div class="slide1">Veritatis ullam quae reprehenderit fuga quaerat dolorem earum expedita, repellendus soluta, totam, minus mollitia molestiae rem necessitatibus aliquid ducimus ratione perferendis. Maiores quibusdam praesentium, obcaecati mollitia, totam officia ab velit.</div>
-				<div class="slide1">Ducimus excepturi, ab ad est, doloremque reprehenderit commodi ullam soluta quas in dolore minima, sunt recusandae, sit tempore nemo. Adipisci hic consequatur reiciendis alias quam atque iste perferendis a laborum.</div>
+			<div class="page_title">
+				<h2>작품소개</h2>
 			</div>
-		</div>
 		<div class="section page fp-auto-height" id="page5" data-anchor="5st">
 			<div class="footer" style="height: 200px;background-color: skyblue">
 			</div>
