@@ -4,20 +4,22 @@
 	<meta charset="UTF-8">
 	<title>:::엉덩이탐정:::</title>
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/fullpage.css">
-	<link rel="stylesheet" href="css/animate.css">
 
-	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
- 
+  	<link rel="stylesheet" href="css/animate.css">
+
+  	<link rel="stylesheet" href="css/swiper.css">
+
+
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
-<!-- 	<script src="js/jquery.bxslider.js"></script> -->
-	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/wow.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+
 
 	<script>
 		new WOW().init();
@@ -36,6 +38,13 @@
 					}else{
 						$("#onView").removeClass("move");
 					}
+
+					if(index == 3){
+						$(".swiper-container").css("display","block");
+					}else{
+						$(".swiper-container").css("display","none");
+					}
+
 				}
 			});
 			$(window).resize(function(){
@@ -56,40 +65,15 @@
 			     $(this).attr("src", $(this).attr("src").replace("After", "Before"));
 			});
 
-			$('.responsive').slick({
-			  dots: true,
-			  infinite: false,
-			  speed: 300,
-			  slidesToShow: 4,
-			  slidesToScroll: 4,
-			  responsive: [
-			    {
-			      breakpoint: 1024,
-			      settings: {
-			        slidesToShow: 3, 
-			        slidesToScroll: 3,
-			        infinite: true,
-			        dots: true
-			      }
-			    },
-			    {
-			      breakpoint: 600,
-			      settings: {
-			        slidesToShow: 2,
-			        slidesToScroll: 2
-			      }
-			    },
-			    {
-			      breakpoint: 480,
-			      settings: {
-			        slidesToShow: 1,
-			        slidesToScroll: 1
-			      }
-			    }
-			    // You can unslick at a given breakpoint now by adding:
-			    // settings: "unslick"
-			    // instead of a settings object
-			  ]
+			new Swiper('.swiper-container', {
+				pagination : { // 페이징 설정
+					el : '.swiper-pagination',
+					clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+				},
+				navigation : { // 네비게이션 설정
+					nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+					prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+				},
 			});
 		});
 	</script>
@@ -120,27 +104,28 @@
 				  	</div>
 				</div>
 			</div>
-			<div class="page1_pattern"></div>
 			<div class="chara_img">
 				<div class="full_bg2">
 					<img src="img/full_bg2.png" alt="">
 				</div>
 				<ul class="clearfix">
-					<li><img src="img/chara_01_Before.png" alt="" class="chara animated bounceInDown"></li>
-					<li><img src="img/chara_02_Before.png" alt="" class="chara animated bounceInDown"></li>
-					<li><img src="img/chara_03_Before.png" alt="" class="chara animated bounceInDown"></li>
-					<li><img src="img/chara_04_Before.png" alt="" class="chara animated bounceInDown"></li>
+					<li><img src="img/chara_01_Before.png" alt="" class="chara animated bounceInLeft"></li>
+					<li><img src="img/chara_02_Before.png" alt="" class="chara animated bounceInUp"></li>
+					<li><img src="img/chara_03_Before.png" alt="" class="chara animated tada"></li>
+					<li><img src="img/chara_04_Before.png" alt="" class="chara animated bounceInRight"></li>
 				</ul>
 			</div>
 			<div class="logo_img">
-				<img src="img/logo_main.png" alt="">
+				<img src="img/logo_main.png" alt="" class="chara animated heartBeat">
 			</div>
 			<div class="scroll">
 				<a href="#2st">
 					<img src="images/btn_scroll.png" alt="">
 				</a>
-			</div>			
+			</div>
 		</div>
+
+
 		<div class="section page" id="page2" data-anchor="2st">
 			<div class="page_title">
 				<h2>작품소개</h2>
@@ -173,31 +158,51 @@
 			<div class="page_title">
 				<h2>캐릭터소개</h2>
 			</div>
-			<!-- div.slide*4>.sView$>lorem30 -->
-			<div class="responsive">
-				<ul class="clearfix">
-					<li><img src="img/page03_01.jpg" alt=""></li>
-					<li><img src="img/page03_02.jpg" alt=""></li>
-					<li><img src="img/page03_03.jpg" alt=""></li>
-					<li><img src="img/page03_04.jpg" alt=""></li>
-					<li><img src="img/page03_05.jpg" alt=""></li>
-					<li><img src="img/page03_06.jpg" alt=""></li>
-				</ul>
-			</div>
-		</div>
+			  <!-- Swiper -->
+			 <div class="swiper-container">
+			    <div class="swiper-wrapper">
+			     	<div class="swiper-slide"><img src="img/page03_01.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="img/page03_02.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="img/page03_03.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="img/page03_04.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="img/page03_05.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="img/page03_06.jpg" alt=""></div>
+			 	 </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+			 </div>
+
+			 <!-- Swiper JS -->
+			<script src="js/swiper.min.js"></script>
+
+			<!-- Initialize Swiper -->
+			<script>
+			    var swiper = new Swiper('.swiper-container', {
+			      slidesPerView: 4,
+			      spaceBetween: 30,
+			      centeredSlides: true,
+			      pagination: {
+			        el: '.swiper-pagination',
+			        clickable: true,
+			      },
+			    });
+			</script>
+			<!-- Swiper 끝 -->
 			<div class="scroll">
-				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
+				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
-		<div class="section page" id="page4" data-anchor="4st">
-			<div class="page_title">
-				<h2>작품소개</h2>
+		<!-- <div class="section page" id="page4" data-anchor="4st">
+			<div class="page4Wrap">
+				<div class="page_title">
+					<h2>작품소개</h2>
+				</div>
+				<div class="section page fp-auto-height" id="page5" data-anchor="5st">
+					<div class="footer" style="height: 200px;background-color: skyblue">
+					</div>
+				</div>
 			</div>
-		<div class="section page fp-auto-height" id="page5" data-anchor="5st">
-			<div class="footer" style="height: 200px;background-color: skyblue">
-			</div>
-		</div>
-	</div>
+		</div> -->
 	<div class="top">
 		top
 	</div>
