@@ -17,7 +17,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #eb4e58;
 }
 .swiper-container {
   margin-left: auto;
@@ -58,8 +58,8 @@
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 100px;
-  height: 100%;
+  width: 25%;
+  height: 345px;
   position: relative;
   transition-property: transform;
 }
@@ -247,10 +247,10 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 100px;
+  height: 5px;
   display: inline-block;
-  border-radius: 100%;
+  border-radius: 5%;
   background: #000;
   opacity: 0.2;
 }

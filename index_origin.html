@@ -3,23 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>:::엉덩이탐정:::</title>
+	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-	
+	<!-- style -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<!-- fullpage -->
 	<link rel="stylesheet" href="css/fullpage.css">
-
+	<!-- wow.js -->
   	<link rel="stylesheet" href="css/animate.css">
-
+	<!-- swiper -->
   	<link rel="stylesheet" href="css/swiper.css">
 
 
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/swiper.min.js"></script>
 	<script type="text/javascript" src="js/wow.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-
-
 
 	<script>
 		new WOW().init();
@@ -55,8 +55,6 @@
 				$(".slide1").height(wh);
 			}
 			whh();
-			$(".sliderWrap").slick({
-			});
 
 			$(".chara").mouseover(function(){
 			     $(this).attr("src", $(this).attr("src").replace("Before","After"));
@@ -65,17 +63,35 @@
 			     $(this).attr("src", $(this).attr("src").replace("After", "Before"));
 			});
 
-			new Swiper('.swiper-container', {
-				pagination : { // 페이징 설정
-					el : '.swiper-pagination',
-					clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-				},
-				navigation : { // 네비게이션 설정
-					nextEl : '.swiper-button-next', // 다음 버튼 클래스명
-					prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
-				},
-			});
-		});
+			
+		    var swiper = new Swiper('.swiper-container', {
+		      slidesPerView: 1,
+		      spaceBetween: 10,
+		      // init: false,
+		      pagination: {
+		        el: '.swiper-pagination',
+		        clickable: true,
+		      },
+		      breakpoints: {
+		        '@0.00': {
+		          slidesPerView: 1,
+		          spaceBetween: 10,
+		        },
+		        '@0.75': {
+		          slidesPerView: 2,
+		          spaceBetween: 20,
+		        },
+		        '@1.00': {
+		          slidesPerView: 3,
+		          spaceBetween: 40,
+		        },
+		        '@1.50': {
+		          slidesPerView: 4,
+		          spaceBetween: 50,
+		        },
+		      }
+		    });
+				});
 	</script>
 </head>
 <body>
@@ -120,7 +136,7 @@
 			</div>
 			<div class="scroll">
 				<a href="#2st">
-					<img src="images/btn_scroll.png" alt="">
+					<img src="img/mouse.png" alt="">
 				</a>
 			</div>
 		</div>
@@ -136,9 +152,9 @@
 			<div class="main m2" id="onView">
 				<div class="page2_txt">
 					<h3>엉덩이탐정</h3>
-					<h4> おしりたんてい</h4>
-					<span>tv만화 | 코믹액션 | 전체관람가<br>일본 NHK-E 테레 2018.05.03. ~ 2019.03.30. | 11분 * 26화 | (금) 오후 05:30</span>
-					<p>엉덩이 탐정과 엉덩이 멋쟁이 부모와 자식 태그로 유적의 수수께끼에 도전하는 모험 활극! 엉덩이 형사 부친 인 댄디에서 의뢰를 받아 무당 벌레 유적을 오자. 유적에 숨겨진 보물이 비가 팔지 않고 무력한 텐텐 마을을 푸는 열쇠가된다고한다. 댄디는 텐텐 마을의 어린이 · 팡땅 함께 한발 앞서 유적으로 향하는하지만 보물을 빼앗 으려하는 이상한 둘로에 표적이되고 만다. 또한 답변 U에서도 예고 장이 도착 ... 엉덩이 형사 댄디의 뒤를 쫓으면서, 유적 야기 할 수많은 수수께끼를 해명!</p>
+					<h4>OsiriTantei,2019</h4>
+					<span>tv만화 | 코믹액션 | 전체관람가<br>일본 NHK-E 테레 2018.05.03. ~ 2019.03.30. | 11분 * 26화</span>
+					<p>엉덩이 탐정과 엉덩이 멋쟁이 부모와 자식 태그로 유적의 수수께끼에 도전하는 모험 활극! 엉덩이 형사 부친 인 댄디에서 의뢰를 받아 무당 벌레 유적을 오자. 유적에 숨겨진 보물이 비가 팔지 않고 무력한 텐텐 마을을 푸는 열쇠가된다고한다. 또한 답변 U에서도 예고 장이 도착 ... 엉덩이 형사 댄디의 뒤를 쫓으면서, 유적 야기 할 수많은 수수께끼를 해명!</p>
 					<a href="#">작품상세보기</a>
 				</div>
 				<div class="video">
@@ -147,14 +163,15 @@
 					</video>
 				</div>
 			</div>
-			<div class="page2_img02">
+			<!-- <div class="page2_img02">
 				<img src="img/contant02_chara02.png" alt="">
-			</div>
+			</div> -->
 			<div class="scroll">
-				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
+				<a href="#3st"><img src="img/mouse.png" alt=""></a>
 			</div>
 		</div>
 		<div class="section page" id="page3" data-anchor="3st">
+			<div class="underBox"></div>
 			<div class="page_title">
 				<h2>캐릭터소개</h2>
 			</div>
@@ -171,38 +188,21 @@
 			    <!-- Add Pagination -->
 			    <div class="swiper-pagination"></div>
 			 </div>
-
-			 <!-- Swiper JS -->
-			<script src="js/swiper.min.js"></script>
-
-			<!-- Initialize Swiper -->
-			<script>
-			    var swiper = new Swiper('.swiper-container', {
-			      slidesPerView: 4,
-			      spaceBetween: 30,
-			      centeredSlides: true,
-			      pagination: {
-			        el: '.swiper-pagination',
-			        clickable: true,
-			      },
-			    });
-			</script>
-			<!-- Swiper 끝 -->
 			<div class="scroll">
-				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
+				<a href="#3st"><img src="img/mouse.png" alt=""></a>
 			</div>
 		</div>
-		<!-- <div class="section page" id="page4" data-anchor="4st">
-			<div class="page4Wrap">
+		<div class="section page" id="page4" data-anchor="4st">
+			<div class="page4Wrap">1
 				<div class="page_title">
-					<h2>작품소개</h2>
+					<h2>공지사항</h2>
 				</div>
-				<div class="section page fp-auto-height" id="page5" data-anchor="5st">
+				<!-- <div class="section page fp-auto-height" id="page5" data-anchor="5st">
 					<div class="footer" style="height: 200px;background-color: skyblue">
 					</div>
-				</div>
+				</div> -->
 			</div>
-		</div> -->
+		</div>
 	<div class="top">
 		top
 	</div>
