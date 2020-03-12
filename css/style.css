@@ -103,17 +103,26 @@ html, body {
 /*page2 start*/
 #page2{background: url(../img/pattern02.png),#f9e888 repeat fixed center;}
 #page2 .page2_img{position: relative;_background-color: #f00;width: 100%;height: 100%;}
-#page2 .page2_img img.page2_img01{position: absolute;z-index: 1;top: 40px;left:0; transform:translateX(50%); animation:img01ani 2s  infinite alternate linear;}
-	@keyframes img01ani{
-		15%{transform:translateX(50%)}
-		20%{transform:translateX(-50%)}
-		to{transform:translateX(-100%)}
-	}
-#page2 .page2_img img.page2_img02{position: absolute;z-index: 1;top: 40px;right: -600px; animation:img02ani 2s 1s infinite alternate linear;}
-	@keyframes img02ani{
-		from{transform: rotateY(-180deg);}
-		to{transform:translateX(-600px) rotateY(-180deg)}
-	}
+#page2 .page2_img img.page2_img01{position: absolute;z-index: 1;top: 40px;left:-400px; transform:translateX(-100%); animation:img01ani 10s infinite linear;}
+   @keyframes img01ani{
+      12%{transform:translateX(100%)}
+      25%{transform:translateX(-100%)}
+   }
+#page2 .page2_img img.page2_img02{position: absolute;z-index: 1;top: 40px;right:-400px; transform:translateX(100%) rotateY(-180deg); animation:img02ani 10s 2.5s infinite linear;}
+   @keyframes img02ani{
+      12%{transform:translateX(-100%) rotateY(-180deg)}
+      25%{transform:translateX(100%) rotateY(-180deg)}
+   }
+#page2 .page2_img img.page2_img03{position: absolute;z-index: 1;bottom: 40px;left:-400px; transform:translateX(-100%); animation:img03ani 10s 5s infinite linear;}
+   @keyframes img03ani{
+      12%{transform:translateX(100%)}
+      25%{transform:translateX(-100%)}
+   }
+#page2 .page2_img img.page2_img04{position: absolute;z-index: 1;bottom: 40px;right:-400px; transform:translateX(100%) rotateY(-180deg); animation:img04ani 10s 7.5s infinite linear;}
+   @keyframes img04ani{
+      12%{transform:translateX(-100%) rotateY(-180deg)}
+      25%{transform:translateX(100%) rotateY(-180deg)}
+   }
 .main .page2_txt{width: 450px;height: 450px;padding: 50px 0 50px 50px;text-align: left;}
 .main .page2_txt h3{font-size:2em;margin-bottom: 10px;}
 .main .page2_txt h4{font-size:1em;margin-bottom: 10px;}
