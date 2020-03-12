@@ -166,7 +166,34 @@ html, body {
 
 /*page4 start*/
 #page4{background-image: url(../img/tree_02.svg);height: 915px;}
-.page4Wrap{width: 100%;}
+.page4Wrap{width: 100%;padding-top: 200px;}
+	.notice{width: 1200px;margin: auto;}
+
+/* 기본테이블 */
+.notice table {width:100%;border-collapse:collapse;border-spacing: 0 5px;border:1px solid #ccc;} 
+.notice caption {padding:10px 0;font-weight:bold;text-align:left}
+.notice caption {padding:0;font-size:0;line-height:0;overflow:hidden}
+.notice thead th {padding:10px 0;font-weight:normal;text-align:center;border-bottom:1px solid #ddd;_background:#fafafa;height:40px}
+.notice tbody tr:hover{background-color: #fff;}
+.notice tbody tr:hover a{text-decoration:underline;}
+.notice tfoot th, .notice tfoot td {padding:10px 0;border-top:1px solid #c1d1d5;border-bottom:1px solid #c1d1d5;_background:#d7e0e2;text-align:center}
+.notice tbody th {padding:8px 0;border-bottom:1px solid #e8e8e8}
+.notice td {color:#666;_background:#fff;padding:10px 5px;border-top:1px solid #ecf0f1;line-height:1.4em;height:60px;word-break:break-all}
+#bo_list .bo_tit .fa-heart {
+    display: inline-block;
+    width: 16px;
+    line-height: 16px;
+    font-size: 0.833em;
+    color: #fff;
+    background: #e52955;
+    text-align: center;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-right: 2px;
+    font-weight: normal;
+}
+
+
 /*page4 end*/
 
 
@@ -220,3 +247,11 @@ html, body {
       align-items: center;
     }
 
+/* 하단 레이아웃 */
+#ft:after {display:block;visibility:hidden;clear:both;content:""}
+#ft strong {font-weight:400;}
+#ft .sns_area {vertical-align:top;position:absolute;right:0;top:0;}
+#ft .sns_area a {color:#fff;margin:0px 5px 0 5px;position:relative;display:inline-block;}
+#ft p {color:#a7a7a7;font-weight:100;font-size:1em;line-height:2em}
+#ft .footer_link {clear:both;margin:0px 0 3% 0;color:#a7a7a7;font-weight:100;}
+#ft .footer_link a {font-size:1em;color:#a7a7a7;font-weight:300;margin-bottom:10px;}
