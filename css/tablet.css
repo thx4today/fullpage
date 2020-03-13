@@ -27,7 +27,7 @@ header>img{float: left;}
 #page1{width: 100%;height: 640px;background-image: url(../img/full_bg.svg);}
 #page1 .charaWrap{width: 100%;height: 100%;position: relative;}
 #page1 .chara_img{width: 100%;margin: 0 auto;}
-#page1 .chara_img ul{}
+#page1 .chara_img ul{position: absolute;top: 40%;}
 #page1 .chara_img ul li{float: left;width: 25%;height: 367px;}
 #page1 .chara_img ul li img{display: block;width: 100%;}
 #page1 .full_bg2{width: 50%;}
@@ -38,9 +38,14 @@ header>img{float: left;}
 
 /*page2 start*/
 #page2{background: url(../img/pattern02.png),#f9e888 repeat fixed center;}
-#onview{width: 100%;}
+#myVideo{
+    position: absolute;bottom: 0;top: 5%;left: 50%;transform: translateX(-50%);
+   	width: 80%;height: auto;background-size: 100% 100%;
+    background-color: black;background-position: center center;
+    object-fit: cover;z-index: 3;
+}
 #page2 .page2_img{display: none;}
-.main .page2_txt{width: 90%;height: 70%;padding: 50px 0 50px 50px;text-align: left;}
+.main .page2_txt{width: 100%;height: 70%;margin: 0 auto;position: absolute;top: 45%;text-align: left;padding: 0 10%;}
 .main .page2_txt h3{font-size:2em;margin-bottom: 10px;}
 .main .page2_txt h4{font-size:1em;margin-bottom: 10px;}
 .main .page2_txt span{font-size:0.8em;margin-bottom: 20px;color: orange;display: block;}
@@ -51,13 +56,11 @@ header>img{float: left;}
 	color:#000;border-radius:7px;margin: auto;transition:0.3s
 }
 .main .page2_txt a:hover{background-color: #000;color:#fff;}
-
-.main .video{display: none;}
 /*page2 end*/
 
 /*page3 start*/
 #page3{background: url(../img/pattern01.png),#f9e888 repeat fixed center;position: relative;}
-.underBox{width: 100%;height: 60%;background-color: #eb4e58;position: absolute;top: 0;}
+.colorBox{width: 100%;height: 70%;background-color: #eb4e58;position: absolute;top: 0;}
 .swiper-container {
 	width:90%;
 	height:70%;
@@ -119,24 +122,13 @@ header>img{float: left;}
 	background-size:cover;
 	text-align: center;
 }
-.scroll{
-	position: absolute;bottom:20px;left:50%;
-	transform:translateX(-50%);
-	animation-name: xScroll;
-	animation-duration:0.8s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-@keyframes xScroll{
-	from{bottom: 20px;}
-	to{bottom: 40px;}
-}
+.scroll{display: none;}
 .main{
-	width: 90%;height: 70%;background-color: #fff;position: absolute;left:50%;
-	transform:translate(-50%,-50%);text-align: center;color: #000;
+	width: 90%;height: 70%;background-color: #fff;;text-align: center;color: #000;position: relative;left: 50%;
+	transform: translateX(-50%);top: 10%;
 }
-.main.m2{transform:translate(-50%,-35%);}
-.page_title{height: 100px;position: absolute;top: 200px;left: 50%;transform: translate(-50%,-50%);}
+.main.m2{}
+.page_title{height: 100px;position: absolute;top: 15%;left: 50%;transform: translate(-50%,-50%);}
 .page_title h2{font-size: 50px;}
 
 .swiper-container {
