@@ -83,10 +83,33 @@
 			$(".chara").mouseout(function() {
 			     $(this).attr("src", $(this).attr("src").replace("After", "Before"));
 			});
+
+			var wh = $(document).height()/2;
+			console.log(wh);
+			$(window).scroll(function(){
+				scrollYPo();
+			});
+			function scrollYPo(){
+				var scrollY=$(window).scrollTop();
+				if(scrollY>wh){
+					$(".top").addClass("opa");
+				}else{					
+					$(".top").removeClass("opa");
+				}
+			}
 			$(".top").click(function(e){
 				e.preventDefault();
 				$("html,body").animate({scrollTop:0},1000)
 			});
+			 $(window).scroll(function(){ 
+		    var scroll = $(window).scrollTop(); 
+		    if(scroll>1){ 
+		      $(".navTop").css("background","#4c6ef5"); 
+		    } 
+		    else{ 
+		      $(".navTop").css("background","skyblue"); 
+		    } 
+		  }) 
 		});
 	</script>
 </head>
@@ -295,21 +318,18 @@
 				    	<a href="#">개인정보취급방침</a>
 				    </p>
 				    <p>
-				    	<strong>(주)초이락컨텐츠팩토리</strong>
+				    	<strong>(주)수삐컨텐츠팩토리</strong>
 				    	<span class="pc_view1">l</span>
-				    	ADDRESS  서울시 구로구 부일로 869 (온수동)<br/>
+				    	ADDRESS  서울시 코로나구 구로로 869 (온수동)<br/>
 				    	COPYRIGHT ⓒ CHOIROCK ALL Rights Reserved.
 				    </p>
 				</div>
 			<!-- } 하단 끝 -->
 			</div>
 		</div>
-		<div class="top">
-		top
-		</div>
 	</div>
 	<div class="top">
-		top
+		<img src="img/ico_menu_active.png" alt="">
 	</div>
 </body>
 </html>
