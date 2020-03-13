@@ -26,47 +26,7 @@
 	<script>
 		new WOW().init();
 		$(document).ready(function(){
-
-			$("#fullpage").fullpage({
-				anchors:["1st","2st","3st","4st"],
-				menu:"#menu",
-				navigation:true,
-				slideNavigation:true,
-				afterLoad:function(anchorslink,index){
-					console.log(anchorslink+","+index);
-					
-					if(index == 2){
-						$("#onView").addClass("move");
-					}else{
-						$("#onView").removeClass("move");
-					}
-
-					if(index == 3){
-						$(".swiper-container").css("display","block");
-					}else{
-						$(".swiper-container").css("display","none");
-					}
-
-				}
-			});
-			$(window).resize(function(){
-				whh();
-			});
-			function whh(){			
-				var wh = $(window).height();
-				$(".slide1").height(wh);
-			}
-			whh();
-
-			$(".chara").mouseover(function(){
-			     $(this).attr("src", $(this).attr("src").replace("Before","After"));
-			});
-			$(".chara").mouseout(function() {
-			     $(this).attr("src", $(this).attr("src").replace("After", "Before"));
-			});
-
-			
-		    var swiper = new Swiper('.swiper-container', {
+			var swiper = new Swiper('.swiper-container', {
 		      slidesPerView: 1,
 		      spaceBetween: 10,
 		      // init: false,
@@ -93,7 +53,41 @@
 		        },
 		      }
 		    });
-				});
+
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st"],
+				menu:"#menu",
+				navigation:true,
+				slideNavigation:true,
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+","+index);
+					
+					if(index == 2){
+						$("#onView").addClass("move");
+					}else{
+						$("#onView").removeClass("move");
+					}
+
+					if(index == 3){
+						$(".swiper-container").css("display","block");
+					}else{
+						$(".swiper-container").css("display","none");
+					}
+
+				}
+			});
+
+			$(".chara").mouseover(function(){
+			     $(this).attr("src", $(this).attr("src").replace("Before","After"));
+			});
+			$(".chara").mouseout(function() {
+			     $(this).attr("src", $(this).attr("src").replace("After", "Before"));
+			});
+			$(".top").click(function(e){
+				e.preventDefault();
+				$("html,body").animate({scrollTop:0},1000)
+			});
+		});
 	</script>
 </head>
 <body>
@@ -148,10 +142,10 @@
 				<h2>작품소개</h2>
 			</div>
 			<div class="page2_img">
-				<img src="img/contant02_chara0101.svg" alt="엉덩이탐정" class="page2_img01">
-				<img src="img/contant02_chara0101.svg" alt="엉덩이탐정" class="page2_img02">
-				<img src="img/contant02_chara0101.svg" alt="엉덩이탐정" class="page2_img03">
-				<img src="img/contant02_chara0101.svg" alt="엉덩이탐정" class="page2_img04">
+				<img src="img/contant02_chara01.svg" alt="엉덩이탐정" class="page2_img01">
+				<img src="img/contant02_chara01.svg" alt="엉덩이탐정" class="page2_img02">
+				<img src="img/contant02_chara01.svg" alt="엉덩이탐정" class="page2_img03">
+				<img src="img/contant02_chara01.svg" alt="엉덩이탐정" class="page2_img04">
 			</div>
 			<div class="main m2" id="onView">
 				<div class="page2_txt">
@@ -307,8 +301,13 @@
 				    	COPYRIGHT ⓒ CHOIROCK ALL Rights Reserved.
 				    </p>
 				</div>
-				<!-- } 하단 끝 -->
+			<!-- } 하단 끝 -->
 			</div>
+		</div>
+		<div class="top">
+		top
+		</div>
+	</div>
 	<div class="top">
 		top
 	</div>
