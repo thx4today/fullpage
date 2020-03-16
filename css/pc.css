@@ -28,7 +28,8 @@ header>img{float: left;}
 #page1 .charaWrap{width: 1920px;height: 100%;position: relative;}
 #page1 .chara_img{width: 1200px;margin: 0 auto;}
 #page1 .chara_img ul{}
-#page1 .chara_img ul li{float: left;width: 25%;height: 367px;}
+#page1 .chara_img ul li{float: left;width: 25%;height: 367px;transition: 1.0s}
+#page1 .chara_img ul li:hover{transform: scale(1.2);}
 #page1 .chara_img ul li img{display: block;}
 #page1 .full_bg2{}
 #page1 .full_bg2 img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 1200px;}

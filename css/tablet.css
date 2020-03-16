@@ -28,7 +28,8 @@ header>img{float: left;}
 #page1 .charaWrap{width: 100%;height: 100%;position: relative;}
 #page1 .chara_img{width: 100%;margin: 0 auto;}
 #page1 .chara_img ul{position: absolute;top: 40%;}
-#page1 .chara_img ul li{float: left;width: 25%;height: 367px;}
+#page1 .chara_img ul li{float: left;width: 25%;height: 367px;transition: 1.0s}
+#page1 .chara_img ul li:hover{transform: scale(1.5);}
 #page1 .chara_img ul li img{display: block;width: 100%;}
 #page1 .full_bg2{width: 50%;}
 #page1 .full_bg2 img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 100%;}
@@ -38,18 +39,23 @@ header>img{float: left;}
 
 /*page2 start*/
 #page2{background: url(../img/pattern02.png),#f9e888 repeat fixed center;}
+.main{
+	width: 90%;height: 80%;background-color: #fff;;text-align: center;color: #000;
+	position: relative;left: 50%;
+	transform: translateX(-50%);top: 10%;
+}
 #myVideo{
     position: absolute;bottom: 0;top: 5%;left: 50%;transform: translateX(-50%);
-   	width: 80%;height: auto;background-size: 100% 100%;
+   	width: 80%;height: 40%;background-size: 100% 100%;
     background-color: black;background-position: center center;
     object-fit: cover;z-index: 3;
 }
 #page2 .page2_img{display: none;}
-.main .page2_txt{width: 100%;height: 70%;margin: 0 auto;position: absolute;top: 45%;text-align: left;padding: 0 10%;}
+.main .page2_txt{width: 100%margin: 0 auto;position: absolute;top: 50%;text-align: left;padding: 0 10%;}
 .main .page2_txt h3{font-size:2em;margin-bottom: 10px;}
 .main .page2_txt h4{font-size:1em;margin-bottom: 10px;}
 .main .page2_txt span{font-size:0.8em;margin-bottom: 20px;color: orange;display: block;}
-.main .page2_txt p{font-size:1em;margin-bottom:30px;line-height: 25px;}
+.main .page2_txt p{font-size:0.9em;margin-bottom:20px;line-height: 25px;}
 .main .page2_txt a{
 	display: block;text-align: center;
 	width: 150px;border: 1px solid #000;line-height:35px;
@@ -60,21 +66,29 @@ header>img{float: left;}
 
 /*page3 start*/
 #page3{background: url(../img/pattern01.png),#f9e888 repeat fixed center;position: relative;}
-.colorBox{width: 100%;height: 70%;background-color: #eb4e58;position: absolute;top: 0;}
+.colorBox{width: 100%;height: 40%;background-color: #eb4e58;position: absolute;top: 0;}
+
 .swiper-container {
-	width:90%;
-	height:70%;
+    width: 80%;
+    height: 395px;
+    top: 0;
 }
 .swiper-slide {
-	text-align:center;
-	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-	align-items:center; /* 위아래 기준 중앙정렬 */
-	justify-content:center; /* 좌우 기준 중앙정렬 */
-}
-/*.swiper-slide img {
-	box-shadow:0 0 5px #555;
-}*/
-
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom: 0 !important;}
 
 /*page3 end*/
 
@@ -123,34 +137,9 @@ header>img{float: left;}
 	text-align: center;
 }
 .scroll{display: none;}
-.main{
-	width: 90%;height: 70%;background-color: #fff;;text-align: center;color: #000;position: relative;left: 50%;
-	transform: translateX(-50%);top: 10%;
-}
-.main.m2{}
 .page_title{height: 100px;position: absolute;top: 15%;left: 50%;transform: translate(-50%,-50%);}
 .page_title h2{font-size: 50px;}
 
-.swiper-container {
-    width: 1200px;
-    height: 395px;
-    top: 120px;
-}
-.swiper-slide {
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
 
 /* 하단 레이아웃 */
 .footer{padding: 50px 0;}
